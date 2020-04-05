@@ -1,0 +1,29 @@
+.header img{
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.header{
+    text-align: center;
+    background-color: burlywood;
+}
+.header nav{
+    background-color: black;
+    line-height: 39px;
+    font-size: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 6px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+nav a:hover{
+    background-color: burlywood;
+    color: black;
+}

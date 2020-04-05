@@ -1,0 +1,13 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin: 10px;
+    padding: 5px;
+}
+.product-image{
+    width: 30%; 
+}
+.product-name{
+    font-weight: 400px;
+    color: black;
+}
