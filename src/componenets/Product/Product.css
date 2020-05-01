@@ -7,7 +7,43 @@
 .product-image{
     width: 30%; 
 }
+.product-desc{
+    width: 50%;
+}
 .product-name{
     font-weight: 400px;
     color: black;
+}
+.cart-button{
+    background-color: white;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0px 2px 5px lightgray;
+    outline: none;
+    font-weight: 500;
+    color: burlywood;
+    background-color: black;
+    font-size: 16px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+}
+
+.cart-button:hover{
+    background-color:burlywood;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+.cart-button icon {
+    padding: 5px;
 }
