@@ -1,0 +1,22 @@
+.cart {
+    margin: 10px;
+}
+
+.cart .inTotal {
+    color: rgb(212, 80, 80);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 3px;
+    text-align: center;
+    line-height: 0px;
+}
+
+.cart h3 {
+    text-align: center;
+    color: #DEB887;
+    background-color: black;
+    margin: 0px;
+    padding: 6px 0px;
+    border-radius: 10px;
+    cursor: default;
+}

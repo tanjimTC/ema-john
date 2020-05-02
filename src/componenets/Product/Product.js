@@ -5,6 +5,7 @@ import "./Product.css";
 
 const Product = (props) => {
   const { name, img, seller, price, stock } = props.product;
+  console.log('sdslds',stock);
   return (
     <div className="product">
       <div className="product-image">
@@ -13,12 +14,19 @@ const Product = (props) => {
       <div className="product-desc">
         <h4 className="product-name">{name}</h4>
         <p>
-         <b> Seller</b> :<small> {seller}</small>
+          <b> Seller</b> :<small> {seller}</small>
         </p>
-        <p><b>Price</b> : ${price}</p>
-        <p>only {stock} left in stock - order soon</p>
-        <button onClick={()=>props.handleAddProduct(props.product)} className="cart-button">
-        <i class="fas fa-shopping-cart">  </i> 
+        <p>
+          <b>Price</b> : ${price}
+        </p>
+        <p>
+          only <b>{stock}</b> left in stock - order soon
+        </p>
+        <button
+          onClick={() => props.handleAddProduct(props.product) } 
+          className="cart-button"
+        >
+          <i className="fas fa-shopping-cart"> </i>
           add to cart
         </button>
       </div>
