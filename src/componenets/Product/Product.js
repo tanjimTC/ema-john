@@ -1,10 +1,11 @@
 import React from "react";
 import "./Product.css";
+import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Product = (props) => {
-  const { name, img, seller, price, stock } = props.product;
+  const { name, img, seller, price, stock ,key } = props.product;
   console.log('sdslds',stock);
   return (
     <div className="product">
@@ -12,7 +13,7 @@ const Product = (props) => {
         <img src={img} alt="" />
       </div>
       <div className="product-desc">
-        <h4 className="product-name">{name}</h4>
+        <h4 className="product-name"><Link to={`/product/${key}`}>{name}</Link></h4>
         <p>
           <b> Seller</b> :<small> {seller}</small>
         </p>
