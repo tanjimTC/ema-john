@@ -1,0 +1,79 @@
+.header img{
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.header{
+    text-align: center;
+    background-color: burlywood;
+}
+.header nav{
+    background-color: black;
+    line-height: 39px;
+    font-size: 20px;
+    position: relative;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    text-align: center;
+    padding: 6px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    position: relative;
+}
+nav a:hover{
+    background-color: burlywood;
+    color: black;
+}
+
+.search{
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: -4px;
+   
+}
+.search input{
+    border: 1px solid #DEB887;
+    background: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    color: white;
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    border: 1px solid tan;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: tan;
+    color: black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 0.3s all ease-in;
+    cursor: pointer;
+    -webkit-transition: 0.3s all ease-in;
+    -moz-transition: 0.3s all ease-in;
+    -ms-transition: 0.3s all ease-in;
+    -o-transition: 0.3s all ease-in;
+}
+.search button:hover,
+.search button:focus{
+    outline: none;
+    background-color: black;
+    color: tan;
+    border: 1px solid tan;
+}

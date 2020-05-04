@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 // import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Product = (props) => {
+  console.log(props);
   const { name, img, seller, price, stock ,key } = props.product;
-  console.log('sdslds',stock);
   return (
     <div className="product">
       <div className="product-image">
@@ -23,13 +23,13 @@ const Product = (props) => {
         <p>
           only <b>{stock}</b> left in stock - order soon
         </p>
-        <button
-          onClick={() => props.handleAddProduct(props.product) } 
-          className="cart-button"
-        >
-          <i className="fas fa-shopping-cart"> </i>
-          add to cart
-        </button>
+        {props.showAddToCart &&  <button
+              onClick={() => props.handleAddProduct(props.product) } 
+              className="cart-button"
+            >
+              <i className="fas fa-shopping-cart"> </i>
+              add to cart
+            </button>}
       </div>
     </div>
   );

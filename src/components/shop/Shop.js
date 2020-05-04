@@ -4,13 +4,13 @@ import "./Shop.css";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
 
+
 const Shop = () => {
   const firstTen = fakeData.slice(0, 10);
 
-  const [products, setProduts] = useState(firstTen);
+  const [products, setProducts] = useState(firstTen);
 
   const [cart, setCart] = useState([]);
-
 
   const handleAddProduct = (product) => {
     const newCart = [...cart, product];
@@ -27,6 +27,7 @@ const Shop = () => {
             key={Math.floor(Math.random() * 1000)}
             product={x}
             handleAddProduct={handleAddProduct}
+            showAddToCart={true}
           ></Product>
         ))}
       </div>

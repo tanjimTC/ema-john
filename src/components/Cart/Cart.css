@@ -1,5 +1,5 @@
 .cart {
-    margin: 10px;
+    margin: 25px 10px;
 }
 
 .cart .inTotal {
@@ -19,4 +19,8 @@
     padding: 6px 0px;
     border-radius: 10px;
     cursor: default;
+}
+.review{
+    width: 100%;
+    margin-top: 5px;
 }

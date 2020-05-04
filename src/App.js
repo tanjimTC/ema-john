@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Header from "./componenets/Header/Header";
-import Shop from "./componenets/shop/Shop";
+import Header from "./components/Header/Header";
+import Shop from "./components/shop/Shop";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Review from "./componenets/Review/Review";
-import NotFound from "./componenets/NotFound/NotFound";
-import ProductKey from "./componenets/ProductKey/ProductKey";
+import Review from "./components/Review/Review";
+import NotFound from "./components/NotFound/NotFound";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <h1>Developer is sleeping</h1>
         </Route>
         <Route path='/product/:productKey'>
-          <ProductKey/>
+          <ProductDetails/>
         </Route>
         <Route  path="*">
           <NotFound />

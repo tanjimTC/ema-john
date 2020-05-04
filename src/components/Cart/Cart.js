@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
+import { Link } from "react-router-dom";
 const Cart = ({ cart }) => {
-  console.log(cart);
   const totalPrice = cart.reduce((x, y) => {
     return x + y.price;
   }, 0);
@@ -11,7 +11,6 @@ const Cart = ({ cart }) => {
   const totalBeforeTax = totalPrice + totalShipping;
   const TaxVat = totalPrice/20;
   const inTotal = totalBeforeTax+TaxVat;
-  console.log("total price", totalPrice);
   return (
     <div> 
         {cart.length ?(
@@ -27,6 +26,10 @@ const Cart = ({ cart }) => {
           Estimated Tax & Vat  : ${TaxVat.toFixed(2)} <br/>
         </p>
         <p className='inTotal'>Order Total : ${inTotal.toFixed(2)} </p>
+        <Link to='/review'>
+            <button className='cart-button review'>Review order</button>
+        </Link>
+        
       </div>
         ):(
         <div className="cart">
