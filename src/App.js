@@ -23,7 +23,7 @@ function App() {
           <Review />
         </Route>
         <Route path="/inventory">
-          <h1>Developer is sleeping</h1>
+          <center><h1>Developer is sleeping</h1></center>
         </Route>
         <Route path='/product/:productKey'>
           <ProductDetails/>
@@ -38,3 +38,4 @@ function App() {
 }
 
 export default App;
+

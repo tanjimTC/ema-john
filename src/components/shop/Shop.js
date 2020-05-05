@@ -3,6 +3,7 @@ import fakeData from "../../fakeData/";
 import "./Shop.css";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
+import { addToDatabaseCart } from "../../utilities/databaseManager";
 
 
 const Shop = () => {
@@ -15,6 +16,9 @@ const Shop = () => {
   const handleAddProduct = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+    const sameProduct = newCart.filter(x=> x.key === product.key);
+    const sameProductLength = sameProduct.length;
+    addToDatabaseCart(product.key,sameProductLength);
   };
 
 
@@ -24,7 +28,7 @@ const Shop = () => {
       <div className="product-container">
         {products.map((x) => (
           <Product
-            key={Math.floor(Math.random() * 1000)}
+            key={x.key}
             product={x}
             handleAddProduct={handleAddProduct}
             showAddToCart={true}
