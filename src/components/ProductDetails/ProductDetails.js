@@ -9,7 +9,6 @@ const ProductDetails = () => {
     console.log(product);
     return (
         <div>
-            <h1>{productKey} Details coming soon</h1>
             <Product product={product}/>
         </div>
     );

@@ -1,0 +1,25 @@
+.review-items{
+    margin: 10px auto;
+    width: 80%;
+}
+.review-items-outer{
+    border-bottom: 1px solid lightgray;
+}
+.review-items .ic{
+    padding:10px;
+    margin:15px 5px;
+    cursor: pointer;
+    background-color: #DEB887;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+.side{
+    padding-left: 30px;
+}
