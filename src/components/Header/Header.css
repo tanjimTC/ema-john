@@ -7,6 +7,7 @@
     text-align: center;
     background-color: burlywood;
 }
+
 .header nav{
     background-color: black;
     line-height: 39px;
@@ -29,6 +30,10 @@ nav a{
 nav a:hover{
     background-color: burlywood;
     color: black;
+}
+.header p{
+    margin: 0;
+    padding: 0;
 }
 
 .search{
@@ -56,19 +61,15 @@ nav a:hover{
 .search button{
     border: 1px solid tan;
     padding: 5px 15px;
-    border-radius: 20px;
     background-color: tan;
     color: black;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     transition: 0.3s all ease-in;
     cursor: pointer;
     -webkit-transition: 0.3s all ease-in;
     -moz-transition: 0.3s all ease-in;
     -ms-transition: 0.3s all ease-in;
     -o-transition: 0.3s all ease-in;
+    
 }
 .search button:hover,
 .search button:focus{

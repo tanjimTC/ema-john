@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useContext } from "react";
 import fakeData from "../../fakeData/";
 import "./Shop.css";
 import Product from "../Product/Product";
@@ -11,7 +11,6 @@ const Shop = () => {
   const firstTen = fakeData.slice(0, 10);
 
   const [products, setProducts] = useState(firstTen);
-
   const [cart, setCart] = useState([]);
 
   useEffect(()=>{

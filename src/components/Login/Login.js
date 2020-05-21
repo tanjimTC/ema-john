@@ -1,16 +1,22 @@
 import React from 'react';
-import Auth from './use-auth';
+import './Login.css';
+import Auth from './useAuth';
 
 const Login = () => {
     const auth = Auth();
-    console.log(auth.user);
+    const handleSignIn= ()=>{
+        auth.signInWithGoogle()
+        .then(res=>{
+            window.location.pathname = './review';
+        })
+    }
     return (
-        <div>
+        <div className='login'>
             <center>
                 <h1>Join the party !!!</h1>
                 {
-                    auth.user? <button onClick={auth.signOut} >Sign out</button> :
-                    <button onClick={auth.signInWithGoogle}>Sign in with google</button>
+                    auth.user? <button className='cart-button' onClick={auth.signOut} >Sign out</button> :
+                    <button className='cart-button' onClick={handleSignIn}>Sign in with google</button>
                 }
             </center>
         </div>

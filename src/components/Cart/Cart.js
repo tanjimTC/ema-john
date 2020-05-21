@@ -2,7 +2,6 @@ import React from "react";
 import "./Cart.css";
 
 const Cart = (props) => {
-  console.log(props);
   const cart = props.cart;
   const totalPrice = cart.reduce((x, y) => {
     const total= x + y.price * y.quantity;

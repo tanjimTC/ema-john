@@ -1,14 +1,18 @@
 .product{
     display: flex;
+    justify-content: space-around;
     border-bottom: 1px solid lightgray;
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 .product-image{
-    width: 30%; 
+    width: 20%; 
+}
+.product-image img{
+    width: 100%;
 }
 .product-desc{
-    width: 50%;
+    width: 60%;
 }
 .product-name{
     font-weight: 400px;
