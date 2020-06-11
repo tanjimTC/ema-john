@@ -24,35 +24,35 @@ const Cart = (props) => {
             <div className="cart-summary-amount">
               <div className="items">Items Ordered :</div>
               <div className="price">
-                {cart.length}
+                <b>{cart.length}</b>
               </div>
             </div>
             <div className="cart-summary-amount">
               <div className="items">Price :</div>
               <div className="price">
-                ${totalPrice.toFixed(2)}
+                <b>${totalPrice.toFixed(2)}</b>
               </div>
             </div>
             <div className="cart-summary-amount">
               <div className="items">Shipping :</div>
               <div className="price">
-                ${totalShipping.toFixed(2)}
+                <b>${totalShipping.toFixed(2)}</b>
               </div>
             </div>
             <div className="cart-summary-amount">
               <div className="items">Total before tax :</div>
               <div className="price">
-                ${totalBeforeTax.toFixed(2)}
+                <b>${totalBeforeTax.toFixed(2)}</b>
               </div>
             </div>
             <div className="cart-summary-amount">
               <div className="items">Estimated Tax & Vat :</div>
               <div className="price">
-                ${TaxVat.toFixed(2)} 
+                <b>${TaxVat.toFixed(2)} </b>
               </div>
             </div>
           </div>
-          <p className="inTotal">Order Total : ${inTotal.toFixed(2)} </p>
+          <p style={{display: 'block',  whiteSpace: 'nowrap'}} className="inTotal">Order Total : ${inTotal.toFixed(2)} </p>
           {props.children}
         </div>
       ) : (
@@ -62,9 +62,6 @@ const Cart = (props) => {
           </h3>
           <p>
             Items Ordered : <b>{cart.length}</b> <br />
-            {/* Price : {totalPrice} <br />
-          Shipping : {totalShipping} <br />
-          Total before tax : {totalBeforeTax} */}
           </p>
         </div>
       )}
