@@ -9,6 +9,7 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Login from "./components/Login/Login";
 import { AuthProvider, PrivateRoute } from "./components/Login/useAuth";
 import Ship from "./components/Ship/Ship";
+import Shipped from "./components/Ship/Shipped";
 
 export const UserContext = React.createContext();
 
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/review">
               <Review />
+            </Route>
+            <Route path='/shipped'>
+              <Shipped/>
             </Route>
             <Route path="/inventory">
               <center>

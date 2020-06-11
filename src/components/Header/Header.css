@@ -10,9 +10,8 @@
 
 .header nav{
     background-color: black;
-    line-height: 39px;
+    line-height: 35px;
     font-size: 20px;
-    position: relative;
 }
 nav a{
     text-decoration: none;
@@ -39,7 +38,7 @@ nav a:hover{
 .search{
     float: right;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: -4px;
    
 }
@@ -59,10 +58,10 @@ nav a:hover{
     outline: none;
 }
 .search button{
-    border: 1px solid tan;
+    border: 1px solid white;
     padding: 5px 15px;
-    background-color: tan;
-    color: black;
+    background-color: black;
+    color: yellow;
     transition: 0.3s all ease-in;
     cursor: pointer;
     -webkit-transition: 0.3s all ease-in;

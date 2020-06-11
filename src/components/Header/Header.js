@@ -5,15 +5,6 @@ import { useAuth } from "../Login/useAuth";
 
 const Header = (props) => {
   const auth = useAuth();
-  // const [query, setQuery] = useState("");
-  // const handleChange = (e) => {
-  //   setQuery(e.target.value);
-  // };
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-  //   let ans = query;
-  //   console.log(ans);
-  // };
   const handleSignOut =()=>{
     auth.signOut()
     .then(res=>{
@@ -29,20 +20,8 @@ const Header = (props) => {
           <a href="/review">Order Review</a>
           <a href="/inventory">Manage Inventory</a>
         </div>
-
-        {/* <div className="search">
-          <form onSubmit={handleSearch}>
-            <input
-              type="text"
-              value={query}
-              onChange={handleChange}
-              placeholder="search..."
-            />
-            <button>Search</button>
-          </form>
-        </div> */}
         {auth.user ? (
-          <p style={{ color: "yellow" }}>{auth.user.name}</p>
+          <p style={{ color: "yellow"  }}>{auth.user.name}</p>
         ) : (
           <p style={{ color: "yellow" }}>
             {" "}

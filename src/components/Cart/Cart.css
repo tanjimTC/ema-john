@@ -8,7 +8,7 @@
     font-weight: 600;
     padding: 3px;
     text-align: center;
-    line-height: 0px;
+    margin: 0px;
 }
 
 .cart h3 {
@@ -23,4 +23,11 @@
 .review{
     width: 100%;
     margin-top: 5px;
+}
+.cart-summary-amount{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-summary-amount .items{
+    display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
 }

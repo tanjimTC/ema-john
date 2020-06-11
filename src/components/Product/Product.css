@@ -21,7 +21,7 @@
 .cart-button{
     background-color: white;
     width: 150px;
-    height: 35px;
+    padding: 5px 10px;
     border: none;
     border: 1px solid black;
     border-radius: 10px;
@@ -46,7 +46,6 @@
     background-color:burlywood;
     color: black;
     cursor: pointer;
-    border: none;
 }
 .cart-button icon {
     padding: 5px;

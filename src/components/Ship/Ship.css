@@ -2,17 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 .form-inner{
-    background-color: #DEB887;
-    padding: 20px 60px;
+    padding: 30px 60px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    box-shadow: 2px 2px 5px lightgrey;
+    box-shadow: 0px 0px 10px lightgrey;
 }
 .form-inner input{
     display: block;
@@ -20,7 +20,7 @@
     margin-top: 20px;
     padding: 5px;
     background: transparent;
-    border: 1px solid black ;
+    border: 1px solid #deb887 ;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -29,7 +29,7 @@
 }
 
 .form-inner input:last-child{
-    border: 1px solid black;
+    border: 1px solid #deb887;
     cursor: pointer;
     padding: 5px 10px;
     transition: 0.3s all ease-in;
@@ -37,10 +37,13 @@
     -moz-transition: 0.3s all ease-in;
     -ms-transition: 0.3s all ease-in;
     -o-transition: 0.3s all ease-in;
+    background-color: black;
+    color: yellow;
 }
 .form-inner input:last-child:hover{
-    background-color: black;
-    color: white;
+    border: 1px solid #deb887;
+    color: black;
+    background-color: transparent;
 }
 
 .form-inner input:focus{
@@ -50,4 +53,8 @@
 
 .form-inner span{
     color: rgb(202, 50, 50);
+}
+.form-inner input:last-child{
+    margin-left: auto;
+    margin-right: auto;
 }

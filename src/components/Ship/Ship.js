@@ -7,6 +7,7 @@ const Ship = () => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    window.location.pathname='/shipped'
   };
   const auth = useAuth();
 
@@ -36,12 +37,6 @@ const Ship = () => {
             placeholder="Your Address"
           />
           {errors.addressLine1 && <span>Address is required</span>}
-
-          <input
-            name="addressLine2"
-            ref={register}
-            placeholder="Your Address"
-          />
 
           <input
             name="city"
