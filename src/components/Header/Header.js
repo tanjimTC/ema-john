@@ -18,7 +18,7 @@ const Header = (props) => {
         <div>
           <a href="/shop">Shop</a>
           <a href="/review">Order Review</a>
-          <a href="/inventory">Manage Inventory</a>
+          <a href="/inventory">Inventory</a>
         </div>
         {auth.user ? (
           <p style={{ color: "yellow"  }}>{auth.user.name}</p>

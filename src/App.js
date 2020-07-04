@@ -10,6 +10,7 @@ import Login from "./components/Login/Login";
 import { AuthProvider, PrivateRoute } from "./components/Login/useAuth";
 import Ship from "./components/Ship/Ship";
 import Shipped from "./components/Ship/Shipped";
+import Inventory from "./components/Inventory/Inventory";
 
 export const UserContext = React.createContext();
 
@@ -33,9 +34,7 @@ function App() {
               <Shipped/>
             </Route>
             <Route path="/inventory">
-              <center>
-                <h1>Developer is sleeping</h1>
-              </center>
+              <Inventory/>
             </Route>
             <Route path="/product/:productKey">
               <ProductDetails />
