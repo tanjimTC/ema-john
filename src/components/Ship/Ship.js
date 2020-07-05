@@ -2,14 +2,32 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./Ship.css";
 import { useAuth } from "../Login/useAuth";
+import { getDatabaseCart, processOrder } from "../../utilities/databaseManager";
 
 const Ship = () => {
+  const auth = useAuth();
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-    window.location.pathname='/shipped'
+    // TODO : move this after payment
+    console.log(auth.user.email);
+    const savedCart = getDatabaseCart();
+    const orderDetail = { email: auth.user.email, cart: savedCart };
+    fetch("http://localhost:4200/placeOrder", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderDetail),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("order placed", data);
+        alert(`your order id is :${data._id}. 
+  please save your id for future query`);
+        processOrder();
+        window.location.pathname = "/shipped";
+      });
   };
-  const auth = useAuth();
 
   return (
     <div className="form-outer">

@@ -43,33 +43,33 @@ export { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart, processOrde
 
 
 // polyfill to support older browser
-const localStorage = window.localStorage || (() => {
-  let store = {}
-  return {
-    getItem(key) {
-      return store[key]
-    },
-    setItem(key, value) {
-      store[key] = value.toString()
-    },
-    clear() {
-      store = {}
-    }
-  };
-})()
+// const localStorage = window.localStorage || (() => {
+//   let store = {}
+//   return {
+//     getItem(key) {
+//       return store[key]
+//     },
+//     setItem(key, value) {
+//       store[key] = value.toString()
+//     },
+//     clear() {
+//       store = {}
+//     }
+//   };
+// })()
 
-const sessionStorage = window.sessionStorage || (() => {
-  let store = {}
-  return {
-    getItem(key) {
-      return store[key]
-    },
-    setItem(key, value) {
-      store[key] = value.toString()
-    },
-    clear() {
-      store = {}
-    }
-  };
-})()
+// const sessionStorage = window.sessionStorage || (() => {
+//   let store = {}
+//   return {
+//     getItem(key) {
+//       return store[key]
+//     },
+//     setItem(key, value) {
+//       store[key] = value.toString()
+//     },
+//     clear() {
+//       store = {}
+//     }
+//   };
+// })()
 // end of poly fill
