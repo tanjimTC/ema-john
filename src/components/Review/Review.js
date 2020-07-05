@@ -4,7 +4,6 @@ import {
   removeFromDatabaseCart,
   processOrder,
 } from "../../utilities/databaseManager";
-import fakeData from "../../fakeData";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import Cart from "../Cart/Cart";
 import happyImage from "../../images/giphy.gif";
@@ -31,12 +30,22 @@ const Review = () => {
   useEffect(() => {
     const savedCart = getDatabaseCart();
     const productsKeys = Object.keys(savedCart);
-    const cardProduct = productsKeys.map((key) => {
-      const product = fakeData.find((x) => x.key === key);
-      product.quantity = savedCart[key];
-      return product;
-    });
-    setCart(cardProduct);
+    fetch('http://localhost:4200/getProductByKey',{
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(productsKeys)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      const cartProduct = productsKeys.map((key) => {
+        const product =data.find((x) => x.key === key);
+        product.quantity = savedCart[key];
+        return product;
+      });
+    setCart(cartProduct);
+    })
   }, []);
   return (
     <div className="shop-container">
