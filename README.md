@@ -1,4 +1,4 @@
-### **Ema John
+### Ema John
 
 **Ema john is a MERN-stack e-commerce site built with React.** <br/> I used Firebase for authention and sign up and login users.
 Stripes is used to payment integration and many more advanced features are added to this project.
