@@ -4,7 +4,7 @@ Stripes is used to payment integration and many more advanced features are added
 
  
  
-Technology used :-
+##Technology used :-
     # React
     # React_Hooks
     # React functional components
